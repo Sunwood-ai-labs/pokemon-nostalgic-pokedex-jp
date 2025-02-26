@@ -1,0 +1,256 @@
+/* 全体のリセットとフォント設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ポケデックス全体のスタイル */
+.pokedex {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: #f00; /* 赤色 - ポケデックスの伝統的な色 */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* ポケデックスの左側（メイン画面） */
+.pokedex-left {
+    width: 60%;
+    height: 100%;
+    background-color: #c00;
+    border-right: 3px solid #800;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.pokedex-left-top {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.light-container {
+    display: flex;
+    gap: 10px;
+}
+
+.light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.light-blue {
+    background-color: #4aa;
+    box-shadow: 0 0 10px #4aa;
+}
+
+.light-red {
+    background-color: #f55;
+}
+
+.light-yellow {
+    background-color: #ff5;
+}
+
+.light-green {
+    background-color: #5f5;
+}
+
+/* ポケモン表示画面 */
+.pokedex-screen-container {
+    flex: 1;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+}
+
+.pokedex-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #98cb98;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#pokemon-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#pokemon-sprite {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ポケモン情報表示部分 */
+.pokedex-left-bottom {
+    margin-top: 20px;
+}
+
+.pokedex-info {
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#pokemon-info {
+    color: #333;
+}
+
+#pokemon-name {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#pokemon-number {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+#pokemon-types {
+    font-size: 1.2em;
+}
+
+/* ポケデックスの右側（ポケモンリスト） */
+.pokedex-right {
+    width: 40%;
+    background-color: #b00;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokedex-list-container {
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokedex-list-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#pokemon-search {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pokemon-list {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid #ccc;
+}
+
+.pokemon-list-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.pokemon-list-item:hover {
+    background-color: #f0f0f0;
+}
+
+.pokemon-list-item-number {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 40px;
+}
+
+.pokemon-list-item-name {
+    flex: 1;
+}
+
+.pokemon-mini-sprite {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* スクロールバーのカスタマイズ */
+.pokemon-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.pokemon-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .pokedex {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .pokedex-left, .pokedex-right {
+        width: 100%;
+    }
+    
+    .pokedex-left {
+        border-right: none;
+        border-bottom: 3px solid #800;
+    }
+    
+    .pokedex-screen-container {
+        height: 300px;
+    }
+    
+    .pokedex-right {
+        height: 400px;
+    }
+}

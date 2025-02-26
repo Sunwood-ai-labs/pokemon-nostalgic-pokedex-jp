@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポケモン図鑑</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="pokedex">
+        <div class="pokedex-left">
+            <div class="pokedex-left-top">
+                <div class="light-container">
+                    <div class="light light-blue"></div>
+                    <div class="light light-red"></div>
+                    <div class="light light-yellow"></div>
+                    <div class="light light-green"></div>
+                </div>
+            </div>
+            <div class="pokedex-screen-container">
+                <div class="pokedex-screen">
+                    <div id="pokemon-display">
+                        <img id="pokemon-sprite" src="" alt="ポケモン">
+                    </div>
+                </div>
+            </div>
+            <div class="pokedex-left-bottom">
+                <div class="pokedex-info">
+                    <div id="pokemon-info">
+                        <h2 id="pokemon-name">ポケモン名</h2>
+                        <p id="pokemon-number">No. 000</p>
+                        <p id="pokemon-types">タイプ: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pokedex-right">
+            <div class="pokedex-list-container">
+                <h2>ポケモンリスト</h2>
+                <div class="search-container">
+                    <input type="text" id="pokemon-search" placeholder="検索..." autofocus>
+                </div>
+                <div class="pokemon-list" id="pokemon-list">
+                    <!-- ポケモンリストはJavaScriptで動的に生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/pokedex.js"></script>
+</body>
+</html>
