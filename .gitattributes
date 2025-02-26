@@ -1,0 +1,4 @@
+*.html linguist-detectable=true
+*.js linguist-detectable=true
+*.css linguist-detectable=true
+README-HF.md text eol=lf
