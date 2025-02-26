@@ -1,3 +1,12 @@
+---
+title: Pokedex Html
+emoji: 🏢
+colorFrom: purple
+colorTo: purple
+sdk: static
+pinned: false
+---
+
 <p align="center">
   <img src="./assets/header.svg" alt="デジタルポケモン図鑑" width="800">
 </p>
