@@ -1,0 +1,18 @@
+# 仮想環境
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Hugging Face関連
+.huggingface/
+
+# エディタ関連
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# システムファイル
+.DS_Store
+Thumbs.db
